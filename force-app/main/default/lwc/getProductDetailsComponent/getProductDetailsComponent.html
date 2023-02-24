@@ -1,0 +1,26 @@
+<template>
+    <lightning-card icon-name="standard:apex_plugin">
+        
+        <template if:true={recordId}>
+            
+            <div class="slds-m-horizontal_medium">
+                <img src={productimage} />
+                    
+                    
+                <lightning-record-view-form onload={handleRecordLoaded} record-id={recordId} object-api-name="Product2" density="compact">
+                    
+                    <lightning-output-field field-name={namefield}></lightning-output-field>
+                    <lightning-output-field field-name={productcode}></lightning-output-field>
+                    <lightning-output-field field-name={pricefield}></lightning-output-field>
+                    
+                    
+                </lightning-record-view-form> 
+               <lightning-button label="Add to Cart" variant="brand" onclick={createCart}></lightning-button>    
+            </div>
+        </template>
+       <template if:false={recordId}>
+            Select a product to see details.
+        </template>
+        
+    </lightning-card>
+</template>

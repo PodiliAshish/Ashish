@@ -1,0 +1,24 @@
+<template>
+   <lightning-card>
+    <lightning-input 
+                    label="Enter the Principal"
+                     placeholder="Enter a value" 
+                     onkeyup={Princ}></lightning-input><br/>
+    <lightning-input 
+                     label="Enter the Rateofinterst"
+                      placeholder="Enter a value" 
+                      onkeyup={Rate}></lightning-input><br/>
+    <lightning-input 
+                    label="Enter the Timeperiod"
+                     placeholder="Enter a value" 
+                     onkeyup={Time}></lightning-input><br/>
+    <lightning-input 
+                    label="Simple interst is..:"
+                     placeholder="The interest is"
+                     value={result}></lightning-input><br/>
+    <lightning-button 
+                      label="Simple interst"  
+                      variant="brand"
+                       onclick={Resultvalue}></lightning-button>
+   </lightning-card> 
+</template>

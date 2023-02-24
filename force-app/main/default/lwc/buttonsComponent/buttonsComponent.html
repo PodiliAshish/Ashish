@@ -1,0 +1,13 @@
+<template>
+ <lightning-card>
+   <lightning-input type="text" label="Enter First Number" placeholder="Enter a value"  onkeyup={firstnumber}></lightning-input><br/><br>
+   <lightning-input type="text" label="Enter Second Number" placeholder="Enter a value"  onkeyup={secondnumber}></lightning-input><br/><br/>
+   
+   <lightning-button label=" Addition"  variant="brand"  onclick={addition}></lightning-button>&nbsp;
+    <lightning-button label="Subtraction"  variant="brand" onclick={subtraction}> </lightning-button>&nbsp;
+    <lightning-button label=" Multiplication"  variant="brand" onclick={multiplication}></lightning-button>&nbsp;
+    <lightning-button label="division" variant="brand" onclick={division} ></lightning-button>&nbsp;
+    <lightning-button label="modulus"  variant="brand" onclick={modulus}></lightning-button>
+    <h2><U><b>The Result is :{result}</b></U></h2>
+   </lightning-card>
+</template>

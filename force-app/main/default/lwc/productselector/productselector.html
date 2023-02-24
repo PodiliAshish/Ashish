@@ -1,0 +1,41 @@
+<template>
+    <article class="slds-card">
+        <div class="slds-grid">
+            <div class="slds-col slds-scrollable">
+                <span>  Parent Record List
+                    <template if:true={recordList.data}
+                    for:each={recordList.data}  for:item="record">
+                        <!-- TestObjTile -->
+                        <!-- <template  key={record.id}> -->
+                            <c-productlistitem
+                            key={record.Id}
+                            product = {record}
+                            onproductselect={handleOnProductSelect}
+                            >
+                            </c-productlistitem>
+                    </template>
+                </span>
+            </div>
+            <div class="slds-col slds-scrollable">
+                <span>
+                    An empty container follows here...<br/>
+                    selected record {listLabel} , id {eventDetail}
+
+                    <lightning-button variant="brand-outline" label="Refresh List" title="refresh the below list" onclick={refreshList} class="slds-m-left_x-small">
+                    </lightning-button>
+                    
+                    <template  if:true={idList}
+                    for:each={lishowText} for:item="item">
+                        <!-- <p key={item}> from p tag {item.Name}</p> -->
+                        <c-cartlistitem key={item} item-rec={item}>
+                        </c-cartlistitem>
+                    </template>
+                    <br/>
+                    <lightning-button variant="brand-outline" label="send List to Org" title="send the above list" onclick={sendList}>
+                    </lightning-button>
+                </span>
+            </div>
+        </div>
+    </article>
+</template>
+

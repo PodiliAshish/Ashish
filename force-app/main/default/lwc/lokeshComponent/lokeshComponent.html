@@ -1,0 +1,29 @@
+<template>
+    <div>
+    <lightning-card>
+        <lightning-input 
+                         label="First Number" 
+                         name="fnumber" 
+                         placeholder="ENter Any NUmber" 
+                         
+                         onkeyup={onfist}></lightning-input>
+        <lightning-input label="Second Number" 
+                         name="snumber" 
+                         placeholder="ENter Any NUmber" 
+                         variant="brand"
+                         onkeyup={onsec}></lightning-input>
+        <lightning-input label="result" 
+                         name="afteroperatio" 
+                         placeholder="presenting by lokesh" 
+                         variant="brand"
+                         value={results}></lightning-input>
+        <lightning-button label="Addition" 
+                           variant="brand" 
+                           onclick={thisadditon}></lightning-button> &nbsp; &nbsp;
+        <lightning-button label="Subtraction" 
+                          variant="brand" ></lightning-button> &nbsp; &nbsp;
+        <lightning-button label="Multiply" 
+                           variant="brand" ></lightning-button>
+    </lightning-card>
+    </div>
+</template>

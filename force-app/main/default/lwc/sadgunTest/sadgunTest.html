@@ -1,0 +1,7 @@
+<template>
+ <lightning-card>
+    <template for:each={wiredProducts.data} for:item="item">
+    <img key={item.Id} src={item.Image_link__c}>
+</template>
+ </lightning-card>   
+</template>

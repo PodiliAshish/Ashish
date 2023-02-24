@@ -1,0 +1,30 @@
+<template>
+   
+    <lightning-card title="GetEvents">
+        <div class="slds-card__body slds-card__body_inner">
+            <template if:true={searchwiredItem}>
+                <lightning-input type="search"
+                onchange={handleSearchTermChange}
+                variant="label-hidden"
+                class="slds-var-m-bottom_small"
+                label="Search"
+                value={searchTerm}>
+            </lightning-input>
+                <lightning-layout  horizontal-align="space" vertical-align="center">
+                    
+                        <lightning-layout-item flexibility="auto" padding="around-small"  class="borderspace" size="12">     
+                            <c-create-lwc-test  class="slds-show slds-is-relative" products={searchwiredItem.data}></c-create-lwc-test>
+                            <lightning-button label="Add to cart"></lightning-button>
+                        </lightning-layout-item>
+        
+                </lightning-layout>
+            </template>
+    
+            <template if:false={hasResults}>
+                <div class="slds-align_absolute-center slds-var-m-vertical_small">
+                  there is no products we did not find results...
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+    </template>
