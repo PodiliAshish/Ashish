@@ -55,6 +55,7 @@ export default class GetProductDetailsComponent extends LightningElement {
     @wire(getRecord, { recordId:'$recordId',fields:FIELDS})
     cartrecords({data,error}){
         if(data){
+
                   this.cartrecords=data
                    this.namefield=getFieldValue(data,NAME_FIELD)
                    console.log(namefield);
